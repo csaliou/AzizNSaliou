@@ -18,4 +18,17 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+	
+	
+	 /**
+     * @Route("/test", name="test")
+     */
+    public function indexFffffAction()
+    {
+        return $this->json([
+		['name' => 'cats'],
+		['name' => 'dogs'],
+		['name' => 'horse'],
+		]);
+    }
 }

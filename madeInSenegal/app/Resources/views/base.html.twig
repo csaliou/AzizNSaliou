@@ -2,12 +2,66 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}Made in Sénégal
+          {% endblock %}</title>
+
+        {% block stylesheets %}
+
+
+        <!--      <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
+
+              <link href="{{ asset('css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet" />
+
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+-->
+
+
+              <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
+
+            <link href="{{ asset('css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet" />
+
+            <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+              <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+              <link href="{{ asset('css/styles.css') }}" type="text/css" rel="stylesheet" />
+
+              <link href="{{ asset('css/own_style_my_site.css') }}" type="text/css" rel="stylesheet" />
+
+              <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.css">
+
+
+
+          {% endblock %}
+
+          {% block javascripts %}
+
+            <script src="{{ asset('js/jquery-3.3.1.min.js') }}" > </script>
+
+              <!-- Font Awesome JS
+              <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+            -->
+
+              <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+
+
+              <script src="{{ asset('js/bootstrap.min.js') }}" > </script>
+
+              <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+
+
+          {% endblock %}
+
+
     </head>
     <body>
+        {% include('header.html.twig') %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+      {#  {% block javascripts %}{% endblock %} #}
     </body>
 </html>

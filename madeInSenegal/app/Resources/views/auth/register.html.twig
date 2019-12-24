@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+<div class="container">
+       <div class="row" >
+           <div class="col-sm-10; text-center" style="margin-left: auto;  margin-right: auto;">
+
+               <h2 class=page-header>Remplissez le formulaire ci-dessous.</h2>
+                   {{form_start(form)}}
+                   {{form_widget(form)}}
+
+                   {% for message in app.flashes('notice') %}
+                       <div class="alert alert-danger" id="errorsMessage">
+                           {{ message }}
+                       </div>
+                   {% endfor %}
+
+                   <div class="form-row mb-4">
+                       <div class="col">
+                           <button class="btn btn-info my-4 btn-block" type="submit">Envoyer</button>
+                       </div>
+                       <div class="col">
+                           <button class="btn btn-info my-4 btn-block" type="reset">Réinitialiser</button>
+                       </div>
+                   </div>
+
+                   {{form_end(form)}}
+           </div>
+       </div>
+</div>
+{% endblock %}
+
+{% block javascripts -%}
+    {{parent()}}
+    <script type="text/javascript" >
+
+ $(document).ready(function(){
+     $("#errorsMessageV").delay(5000).slideUp(300);
+ });
+    </script>
+{% endblock %}
